@@ -56,20 +56,20 @@ function cambiarContexto(contexto) {
     // Cambiar las imágenes dependiendo del contexto
     switch (contexto) {
         case "enfoque":
-            banner.setAttribute('src', `/imagenes/los_3_hermanos.png`);  // Imagen específica para enfoque
+            banner.setAttribute('src', `./imagenes/los_3_hermanos.png`);  // Imagen específica para enfoque
             titulo.innerHTML = `
             Optimiza tu productividad,<br>
                 <strong class="app__title-strong">sumérgete en lo que importa.</strong>
             `;
             break;
         case "descanso-corto":
-            banner.setAttribute('src', `/imagenes/Hp.jpg`);  // Imagen específica para descanso corto
+            banner.setAttribute('src', `./imagenes/Hp.jpg`);  // Imagen específica para descanso corto
             titulo.innerHTML = `
             ¿Qué tal tomar un respiro? <strong class="app__title-strong">¡Haz una pausa corta!</strong>
             `;
             break;
         case "descanso-largo":
-            banner.setAttribute('src', `/imagenes/descarga (4).jpeg`);  // Imagen específica para descanso largo
+            banner.setAttribute('src', `./imagenes/descarga (4).jpeg`);  // Imagen específica para descanso largo
             titulo.innerHTML = `
             Hora de volver a la superficie.<strong class="app__title-strong"> Haz una pausa larga.</strong>
             `;
@@ -102,13 +102,13 @@ function iniciarOpausar() {
     audioPlay.play();
     idIntervalo = setInterval(cuentaRegresiva, 1000);
     textoIniciarPausar.textContent = "Pausar";
-    iconoIniciarPausar.setAttribute('src', `/imagenes/pause.png`);
+    iconoIniciarPausar.setAttribute('src', `./imagenes/pause.png`);
 }
 
 function reiniciar() {
     clearInterval(idIntervalo); 
     textoIniciarPausar.textContent = "Comenzar";
-    iconoIniciarPausar.setAttribute('src', `/imagenes/play_arrow.png`);
+    iconoIniciarPausar.setAttribute('src', `./imagenes/play_arrow.png`);
     idIntervalo = null;
 }
 
